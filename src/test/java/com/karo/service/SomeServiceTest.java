@@ -1,6 +1,7 @@
 package com.karo.service;
 
 import com.karo.service.impl.SomeServiceImpl;
+import javafx.application.Application;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -36,5 +37,13 @@ public class SomeServiceTest {
         ApplicationContext context = new ClassPathXmlApplicationContext(config);
         Student mystudent = (Student)context.getBean("student");
         System.out.println(mystudent.toString());
+    }
+
+    @Test
+    public void schoolTest(){
+        ApplicationContext context = new ClassPathXmlApplicationContext(config);
+        System.out.println("-----spring context init already----");
+        Student student = (Student)context.getBean("student");
+        System.out.println(student);
     }
 }
