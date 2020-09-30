@@ -1,4 +1,4 @@
-#####spring 项目实现步骤
+##### spring 项目实现步骤
 1. 创建maven项目  
 2. 加入maven的依赖：  
      * 加入spring依赖  
@@ -8,11 +8,11 @@
     声明类的信息
 5. 测试
 ---
-####spring 为javabean 属性赋值
+#### spring 为javabean 属性赋值
 1. 使用xml文件实现  
 2. 基础注解实现
 ---
-####注入方式
+#### 注入方式
 1. set()注入
     ```
     <bean id="student" class="com.karo.service.impl.StudentImpl">
@@ -37,7 +37,7 @@
 
 
 ---
-####junit使用
+#### junit使用
 1. 引入junit依赖
 2. 创建测试类：src/test/java
 3. 创建测试方法  
