@@ -1,6 +1,6 @@
-package com.karo.service.impl;
+package com.karo.xmlIoc.service.impl;
 
-import com.karo.service.School;
+import com.karo.xmlIoc.service.School;
 
 public class SchoolImpl implements School {
 

@@ -1,7 +1,8 @@
-package com.karo.service;
+package com.karo.xmlIoc.service;
 
-import com.karo.service.impl.SomeServiceImpl;
-import javafx.application.Application;
+import com.karo.xmlIoc.service.SomeService;
+import com.karo.xmlIoc.service.Student;
+import com.karo.xmlIoc.service.impl.SomeServiceImpl;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

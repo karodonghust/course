@@ -1,4 +1,4 @@
-package com.karo.service;
+package com.karo.xmlIoc.service;
 
 public interface SomeService {
 

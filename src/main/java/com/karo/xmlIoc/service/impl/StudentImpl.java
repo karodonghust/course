@@ -1,8 +1,8 @@
-package com.karo.service.impl;
+package com.karo.xmlIoc.service.impl;
 
-import com.karo.service.ClassRoom;
-import com.karo.service.School;
-import com.karo.service.Student;
+import com.karo.xmlIoc.service.ClassRoom;
+import com.karo.xmlIoc.service.School;
+import com.karo.xmlIoc.service.Student;
 
 public class StudentImpl implements Student {
     private String name;

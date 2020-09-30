@@ -1,6 +1,6 @@
-package com.karo.service.impl;
+package com.karo.xmlIoc.service.impl;
 
-import com.karo.service.ClassRoom;
+import com.karo.xmlIoc.service.ClassRoom;
 
 public class ClassRoomImpl implements ClassRoom {
 

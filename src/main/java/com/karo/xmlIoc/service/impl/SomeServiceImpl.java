@@ -1,6 +1,6 @@
-package com.karo.service.impl;
+package com.karo.xmlIoc.service.impl;
 
-import com.karo.service.SomeService;
+import com.karo.xmlIoc.service.SomeService;
 
 public class SomeServiceImpl implements SomeService {
 

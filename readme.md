@@ -1,3 +1,17 @@
+#### what`s spring
+1. spring是一个框架，核心技术是ioc，aop。实现解耦合
+2. spring是一个容器，容器中存放的是java对象
+
+#### how to use spring
+1. 把项目中需要使用的对象放入到容器中
+2. 让容器完成对象的创建，对象之间关系的管理
+3. 从容器中获取需要使用的对象  
+    * dao类，service类，controller类，工具类，应该放到容器中。
+    * 实体类对象，servlet,listener,filter,这些对象不应该放到容器中。
+    * spring中的对象，默认都是单例的，在容器中叫这个名称的对象只有一个
+
+
+
 ##### spring 项目实现步骤
 1. 创建maven项目  
 2. 加入maven的依赖：  
@@ -12,10 +26,10 @@
 1. 使用xml文件实现  
 2. 基础注解实现
 ---
-#### 注入方式
+#### 注入方式 xml方式  
 1. set()注入
     ```
-    <bean id="student" class="com.karo.service.impl.StudentImpl">
+    <bean id="student" class="com.karo.xmlIoc.service.impl.StudentImpl">
           <property name="name" value="李四"/> <!--自动调用setName方法 -->
           <property name="age" value="20"/> <!-- 自动调用setAge方法 -->
            <property name="school" ref="mySchool"/>
@@ -29,7 +43,7 @@
         * value 构造方法的形参对象是简单类型的，使用value
         * ref 构造方法的形参对象是引用类型是，使用ref
     ```
-        <bean id="mySchool" class="com.karo.service.impl.SchoolImpl">
+        <bean id="mySchool" class="com.karo.xmlIoc.service.impl.SchoolImpl">
            <constructor-arg name="name" value="mySchool"/>
            <constructor-arg name="address" value="1037森林"/>
        </bean>

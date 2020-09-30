@@ -2,20 +2,20 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="someService" class="com.karo.service.impl.SomeServiceImpl"/>
-    <bean id="student" class="com.karo.service.impl.StudentImpl">
+    <bean id="someService" class="com.karo.xmlIoc.service.impl.SomeServiceImpl"/>
+    <bean id="student" class="com.karo.xmlIoc.service.impl.StudentImpl">
         <property name="name" value="李四"/>
         <property name="age" value="20"/>
         <property name="school" ref="mySchool"/>
         <property name="classRoom" ref="myClassRoom"/>
     </bean>
 
-    <bean id="mySchool" class="com.karo.service.impl.SchoolImpl">
+    <bean id="mySchool" class="com.karo.xmlIoc.service.impl.SchoolImpl">
         <constructor-arg name="name" value="mySchool"/>
         <constructor-arg name="address" value="1037森林"/>
     </bean>
 
-    <bean id="myClassRoom" class="com.karo.service.impl.ClassRoomImpl">
+    <bean id="myClassRoom" class="com.karo.xmlIoc.service.impl.ClassRoomImpl">
         <property name="name" value="1406"/>
     </bean>
 
