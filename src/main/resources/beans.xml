@@ -3,11 +3,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="someService" class="com.karo.xmlIoc.service.impl.SomeServiceImpl"/>
-    <bean id="student" class="com.karo.xmlIoc.service.impl.StudentImpl">
+
+
+
+    <bean id="student" class="com.karo.xmlIoc.service.impl.StudentImpl" autowire="byType">
         <property name="name" value="李四"/>
         <property name="age" value="20"/>
-        <property name="school" ref="mySchool"/>
         <property name="classRoom" ref="myClassRoom"/>
+        <property name="school" ref="mySchool"/>
     </bean>
 
     <bean id="mySchool" class="com.karo.xmlIoc.service.impl.SchoolImpl">
