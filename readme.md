@@ -193,4 +193,10 @@
     > ```
     > execution(public * *(..)) <!-- 指定切入点为：任意公共方法-->
     > execution(* set*(..)) <!-- 指定切入点：任何一个以"set"开始的方法 -->
+    > execution(* com.xyz.service.*.*(..)) <!-- 定义在service包里的任意类的任意方法。
+    > execution(* com.xyz.service..*.*(..)) <!-- 指定切入点：定义在service包或者子包里的任意类的任意方法 -->
+    > execution(* *..service.*.*(..)) <!-- 指定切入点：所有包下的service子包下所有类的任意方法 -->
+    > /**
+    >   ".."出现在类名中时，后面必须跟*，表示，包，子包下的所有类
+    > */
     > ```
