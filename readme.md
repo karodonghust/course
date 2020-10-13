@@ -181,7 +181,17 @@
 #### AspectJ
 1. 切面执行的时机，在规范中叫做通知
     > * @Before
-    > * @AfterReturning
+    > * @AfterReturning  
+    >>  ```
+    >> /**
+    >> 自定义变量名必须和通知方法的形参名保持一致
+    >> 能够获取到目标方法的返回值，可以根据这个返回值做不同的处理功能
+    >> 可以修改返回值(修改String会失效)
+    >> */
+    >> @AfterReturning(value = "execution(* *..*Service*.returnTest(..))",returning="res")
+    >> public void myAfterReturning(Object ret){
+    >> }
+    >> `````
     > * @Around
     > * @AfterThrowing
     > * @After

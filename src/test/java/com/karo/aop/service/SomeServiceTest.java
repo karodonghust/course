@@ -14,4 +14,11 @@ public class SomeServiceTest {
 		System.out.println(someService.getClass().getName());
 		someService.doSomeService("我是一个service");
 	}
+
+	@Test
+	public void returnTest(){
+		ApplicationContext context = new ClassPathXmlApplicationContext(config);
+		SomeService someService = (SomeService)context.getBean("someServiceImpl");
+		System.out.println(someService.returnSomething());
+	}
 }
