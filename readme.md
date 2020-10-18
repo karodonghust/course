@@ -213,3 +213,39 @@
     >   ".."出现在类名中时，后面必须跟*，表示，包，子包下的所有类
     > */
     > ```
+    
+###mybatis
+1. sql mapper :sql映射，可以把数据库表中的一行数据，映射为一个java对象
+2. Data ACCESS OBJECTS(DAOS) : 数据访问，对数据库执行增删改查
+3. 提供功能：
+    * 提供了创建Connection,Statement,ResultSet的能力。
+    * 提供了执行sql语句的能力，不需要手动执行sql
+    * 提供了循环sql，把sql的结果转为Java对象，List集合的能力
+    * 提供了资源释放的能力，不需要手动关闭Connection，Statement，ResultSet的能力
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
