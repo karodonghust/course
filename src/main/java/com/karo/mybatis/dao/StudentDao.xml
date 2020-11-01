@@ -6,5 +6,14 @@
 
     <select id="selectStudents" resultType="com.karo.mybatis.domain.Student">
     select * from student order by id
-  </select>
+    </select>
+
+    <insert id="insertStudent" >
+        insert into student values(#{id},#{name},#{email},#{age})
+    </insert>
+
+    <select id="selectStudent" parameterType="java.lang.Integer"
+            resultType="com.karo.mybatis.domain.Student">
+        select * from student where id = #{id}
+    </select>
 </mapper>

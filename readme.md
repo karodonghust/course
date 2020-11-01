@@ -222,6 +222,38 @@
     * 提供了执行sql语句的能力，不需要手动执行sql
     * 提供了循环sql，把sql的结果转为Java对象，List集合的能力
     * 提供了资源释放的能力，不需要手动关闭Connection，Statement，ResultSet的能力
+4. mybatis的主要类
+    * Resource: 主要负责读取主配置文件
+        ```
+            InputStream inputStream = Resource.getResourceAsTream("mybatis.xml");
+        ```
+    * SqlSessionFactoryBuilder:创建SqlSessionFactory对象
+        ```
+            SqlSessionFactoryBuilder sqlSessionBuilder = new SqlSessionBuilder();
+            SqlSessionFactory sqlSessionFactory = sqlSessionBuilder.build(inputStream);
+        ```
+    * SqlSessionFactory:重量级对象，程序中创建耗时较长，资源消耗较大
+        ```
+            /**
+                openSession():无参数，获取非自动提交事物的SqlSession对象
+                openSession(true):获取自动提交事物的SqlSession对象
+            */
+            SqlSession sqlSession = SqlSessionFactory.openSession();
+        ```
+    * SqlSession:数据库操作方法,非线程安全，使用前打开，使用后关闭，这样才能保证线程安全。
+        * selectOne()
+        * selectList()
+        * insert()
+        * update()
+        * commit()
+        * rollback()
+5. 使用动态代理
+    * 使用SqlSession.getMapper(dao接口.class),可以直接获取该dao接口的对象
+        > ```
+        > SqlSession sqlSession = SQLUtils.getSqlSession(CONFIG);
+        > StudentDao dao = sqlSession.getMapper(StudentDao.class);
+        > ```
+    * 传入参数
 
 
 
