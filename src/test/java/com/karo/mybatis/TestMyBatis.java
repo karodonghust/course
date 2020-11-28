@@ -36,13 +36,10 @@ public class TestMyBatis {
 	@Test
 	public void selectTest() throws IOException {
 		String config = "mybatis/mybatis.xml";
-
 		SqlSession sqlSession = SQLUtils.getSqlSession(config);
 
 		String sqlId = "com.karo.mybatis.dao.StudentDao.selectStudents";
-
 		List<Student> students = sqlSession.selectList(sqlId);
-
 		students.forEach(stu -> System.out.println(stu));
 
 		sqlSession.close();
