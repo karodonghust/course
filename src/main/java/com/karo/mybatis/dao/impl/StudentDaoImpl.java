@@ -3,10 +3,12 @@ package com.karo.mybatis.dao.impl;
 import com.karo.mybatis.dao.StudentDao;
 import com.karo.mybatis.domain.Student;
 import com.karo.mybatis.utils.SQLUtils;
+import com.karo.mybatis.vo.QueryParam;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 public class StudentDaoImpl implements StudentDao {
 	public static final String CONFIG = "mybatis/mybatis.xml";
@@ -21,6 +23,21 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
+	public List<Student> studentSelect(Student student) {
+		return null;
+	}
+
+	@Override
+	public List<Student> mapSelect(Map<String, Object> map) {
+		return null;
+	}
+
+	@Override
+	public List<Student> orderSelect(String column) {
+		return null;
+	}
+
+	@Override
 	public int insertStudent(Student student) throws IOException {
 		SqlSession sqlSession = SQLUtils.getSqlSession(CONFIG);
 		String sqlId = "com.karo.mybatis.dao.StudentDao.insertStudent";
@@ -32,6 +49,16 @@ public class StudentDaoImpl implements StudentDao {
 
 	@Override
 	public Student selectStudent(Integer id) {
+		return null;
+	}
+
+	@Override
+	public List<Student> mulitParamSelect(String name, Integer age) {
+		return null;
+	}
+
+	@Override
+	public List<Student> objectSelect(QueryParam param) {
 		return null;
 	}
 }

@@ -16,4 +16,29 @@
             resultType="com.karo.mybatis.domain.Student">
         select * from student where id = #{id}
     </select>
+
+    <select id="mulitParamSelect"
+            resultType="com.karo.mybatis.domain.Student">
+        select * from student where name =  #{myName} or age =  #{myAge}
+    </select>
+
+    <select id="objectSelect" parameterType="com.karo.mybatis.vo.QueryParam"
+            resultType="com.karo.mybatis.domain.Student">
+        select * from student where name =  #{name} and age =  #{age}
+    </select>
+
+    <select id="studentSelect" parameterType="com.karo.mybatis.domain.Student"
+            resultType="com.karo.mybatis.domain.Student">
+        select * from student where name =  #{name} and age =  #{age}
+    </select>
+
+    <select id="mapSelect" parameterType="java.util.Map"
+            resultType="com.karo.mybatis.domain.Student">
+        select * from student where name =  #{name} and age =  #{age}
+    </select>
+
+    <select id="orderSelect"
+            resultType="com.karo.mybatis.domain.Student">
+        select * from student order by #{column}
+    </select>
 </mapper>

@@ -253,8 +253,10 @@
         > SqlSession sqlSession = SQLUtils.getSqlSession(CONFIG);
         > StudentDao dao = sqlSession.getMapper(StudentDao.class);
         > ```
-    * 传入参数
-
+    * 传入参数:从java代码中把数据传入到mapper文件的sql语句中
+        * parameterType: 写在mapper文件中的一个属性，表示dao接口中方法的参数的数据类型。
+        * \# 告诉mybatis使用实际的参数值代替，\#{...} 代替sql语句中的？
+        * $ 告诉mybatis使用$包含的"字符串" 替换所在位置，用在替换表名等。（性能差，容易造成sql注入）
 
 
 

@@ -10,9 +10,14 @@ import java.io.InputStream;
 
 public class SQLUtils {
 
-	public static SqlSession getSqlSession(String config) throws IOException {
+	public static SqlSession getSqlSession(String config){
 
-		InputStream inputStream = Resources.getResourceAsStream(config);
+		InputStream inputStream = null;
+		try{
+			inputStream = Resources.getResourceAsStream(config);
+		} catch (IOException e){
+			System.out.println(e);
+		}
 
 		SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
 
