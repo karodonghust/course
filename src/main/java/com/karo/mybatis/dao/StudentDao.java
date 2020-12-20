@@ -25,4 +25,6 @@ public interface StudentDao {
 	public List<Student> mapSelect(Map<String,Object> map);
 
 	public List<Student> orderSelect(@Param("column")String column);
+
+	public List<Student> test(Map<String ,Object> map);
 }

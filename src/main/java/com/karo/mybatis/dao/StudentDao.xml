@@ -41,4 +41,8 @@
             resultType="com.karo.mybatis.domain.Student">
         select * from student order by #{column}
     </select>
+
+    <select id="test" resultType="com.karo.mybatis.domain.Student">
+        select * from student where name = #{name} or age = #{age}
+    </select>
 </mapper>

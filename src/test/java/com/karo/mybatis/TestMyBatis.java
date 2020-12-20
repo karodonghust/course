@@ -5,10 +5,12 @@ import com.karo.mybatis.dao.impl.StudentDaoImpl;
 import com.karo.mybatis.domain.Student;
 import com.karo.mybatis.utils.SQLUtils;
 import com.karo.mybatis.vo.QueryParam;
+import com.sun.xml.internal.ws.api.message.HeaderList;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -153,6 +155,13 @@ public class TestMyBatis {
 		printStudents(students);
 	}
 
-
+	@Test
+	public void orderSelect1(){
+		SqlSession sqlSession = SQLUtils.getSqlSession(CONFIG);
+		StudentDao dao = sqlSession.getMapper(StudentDao.class);
+		Map map = new HashMap();
+		List<Student> students = dao.test(map);
+		printStudents(students);
+	}
 
 }

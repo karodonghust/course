@@ -58,6 +58,11 @@ public class StudentDaoImpl implements StudentDao {
 	}
 
 	@Override
+	public List<Student> test(Map<String, Object> map) {
+		return null;
+	}
+
+	@Override
 	public List<Student> objectSelect(QueryParam param) {
 		return null;
 	}
