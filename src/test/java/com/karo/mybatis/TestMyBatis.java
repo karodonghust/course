@@ -1,16 +1,15 @@
 package com.karo.mybatis;
 
+import com.github.pagehelper.PageHelper;
 import com.karo.mybatis.dao.StudentDao;
 import com.karo.mybatis.dao.impl.StudentDaoImpl;
 import com.karo.mybatis.domain.Student;
 import com.karo.mybatis.utils.SQLUtils;
 import com.karo.mybatis.vo.QueryParam;
-import com.sun.xml.internal.ws.api.message.HeaderList;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -151,6 +150,7 @@ public class TestMyBatis {
 	public void orderSelect(){
 		SqlSession sqlSession = SQLUtils.getSqlSession(CONFIG);
 		StudentDao dao = sqlSession.getMapper(StudentDao.class);
+		PageHelper.startPage(1,1);
 		List<Student> students = dao.orderSelect("email");
 		printStudents(students);
 	}
@@ -160,6 +160,7 @@ public class TestMyBatis {
 		SqlSession sqlSession = SQLUtils.getSqlSession(CONFIG);
 		StudentDao dao = sqlSession.getMapper(StudentDao.class);
 		Map map = new HashMap();
+		PageHelper.startPage(1,1);
 		List<Student> students = dao.test(map);
 		printStudents(students);
 	}
