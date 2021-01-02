@@ -16,4 +16,11 @@ public class StudentTest {
         }
     }
 
+    @Test
+    public void daoTest(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(CONFIG);
+        StudentService studentService = (StudentService) applicationContext.getBean("studentService");
+        System.out.println(studentService.queryStudents());
+    }
+
 }
