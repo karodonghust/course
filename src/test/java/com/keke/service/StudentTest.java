@@ -22,5 +22,4 @@ public class StudentTest {
         StudentService studentService = (StudentService) applicationContext.getBean("studentService");
         System.out.println(studentService.queryStudents());
     }
-
 }
