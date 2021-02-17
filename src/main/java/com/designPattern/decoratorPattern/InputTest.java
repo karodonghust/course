@@ -1,6 +1,5 @@
 package com.designPattern.decoratorPattern;
 
-import com.designPattern.decoratorPattern.LowerCaseInputStream;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
