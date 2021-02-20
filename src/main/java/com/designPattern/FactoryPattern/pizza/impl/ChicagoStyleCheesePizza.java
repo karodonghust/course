@@ -1,14 +1,19 @@
 package com.designPattern.FactoryPattern.pizza.impl;
 
 import com.designPattern.FactoryPattern.pizza.Pizza;
+import com.designPattern.FactoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
 
 public class ChicagoStyleCheesePizza extends Pizza {
 
-    public ChicagoStyleCheesePizza(){
+    public ChicagoStyleCheesePizza(PizzaIngredientFactory pizzaIngredientFactory) {
         name = "Chicago style deep dish cheese pizza";
-        dough = "Extra thick crust dough";
-        sauce = "Plum tomato sauce";
+        this.pizzaIngredientFactory = pizzaIngredientFactory;
+    }
 
-        toppings.add("shredded mozzarella cheese");
+    @Override
+    public void prepare() {
+        dough = pizzaIngredientFactory.createDough();
+        sauce = pizzaIngredientFactory.createSauce();
+        super.prepare();
     }
 }

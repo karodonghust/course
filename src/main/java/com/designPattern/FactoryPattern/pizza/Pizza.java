@@ -1,14 +1,20 @@
 package com.designPattern.FactoryPattern.pizza;
 
+import com.designPattern.FactoryPattern.pizzaIngredient.Dough;
+import com.designPattern.FactoryPattern.pizzaIngredient.Sauce;
+import com.designPattern.FactoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
+
 import java.util.ArrayList;
 
 public abstract class Pizza {
 
+    protected PizzaIngredientFactory pizzaIngredientFactory;
+
     protected String name;
     //面团
-    protected String dough;
+    protected Dough dough;
     //调料
-    protected String sauce;
+    protected Sauce sauce;
     //佐料
     protected ArrayList toppings = new ArrayList();
 
