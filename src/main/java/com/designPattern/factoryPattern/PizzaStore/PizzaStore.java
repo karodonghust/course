@@ -1,6 +1,6 @@
-package com.designPattern.FactoryPattern.PizzaStore;
+package com.designPattern.factoryPattern.PizzaStore;
 
-import com.designPattern.FactoryPattern.pizza.Pizza;
+import com.designPattern.factoryPattern.pizza.Pizza;
 
 public abstract class PizzaStore {
 

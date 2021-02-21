@@ -1,9 +1,9 @@
-package com.designPattern.FactoryPattern;
+package com.designPattern.factoryPattern;
 
-import com.designPattern.FactoryPattern.PizzaStore.PizzaStore;
-import com.designPattern.FactoryPattern.PizzaStore.impl.ChicagoStylePizzaStore;
-import com.designPattern.FactoryPattern.PizzaStore.impl.NYPizzaStore;
-import com.designPattern.FactoryPattern.pizza.Pizza;
+import com.designPattern.factoryPattern.PizzaStore.PizzaStore;
+import com.designPattern.factoryPattern.PizzaStore.impl.ChicagoStylePizzaStore;
+import com.designPattern.factoryPattern.PizzaStore.impl.NYPizzaStore;
+import com.designPattern.factoryPattern.pizza.Pizza;
 
 public class PizzaTestDriver {
 

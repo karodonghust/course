@@ -1,8 +1,8 @@
-package com.designPattern.FactoryPattern.pizza;
+package com.designPattern.factoryPattern.pizza;
 
-import com.designPattern.FactoryPattern.pizzaIngredient.Dough;
-import com.designPattern.FactoryPattern.pizzaIngredient.Sauce;
-import com.designPattern.FactoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
+import com.designPattern.factoryPattern.pizzaIngredient.Dough;
+import com.designPattern.factoryPattern.pizzaIngredient.Sauce;
+import com.designPattern.factoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
 
 import java.util.ArrayList;
 

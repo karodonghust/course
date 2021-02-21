@@ -1,6 +1,6 @@
-package com.designPattern.FactoryPattern.pizzaIngredientFactory;
+package com.designPattern.factoryPattern.pizzaIngredientFactory;
 
-import com.designPattern.FactoryPattern.pizzaIngredient.*;
+import com.designPattern.factoryPattern.pizzaIngredient.*;
 
 public interface PizzaIngredientFactory {
 

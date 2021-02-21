@@ -1,7 +1,7 @@
-package com.designPattern.FactoryPattern.pizza.impl;
+package com.designPattern.factoryPattern.pizza.impl;
 
-import com.designPattern.FactoryPattern.pizza.Pizza;
-import com.designPattern.FactoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
+import com.designPattern.factoryPattern.pizza.Pizza;
+import com.designPattern.factoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
 
 public class NYStyleCheesePizza extends Pizza {
 

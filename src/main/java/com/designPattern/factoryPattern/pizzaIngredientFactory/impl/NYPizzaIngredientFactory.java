@@ -1,9 +1,9 @@
-package com.designPattern.FactoryPattern.pizzaIngredientFactory.impl;
+package com.designPattern.factoryPattern.pizzaIngredientFactory.impl;
 
-import com.designPattern.FactoryPattern.pizzaIngredient.*;
-import com.designPattern.FactoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
+import com.designPattern.factoryPattern.pizzaIngredient.*;
+import com.designPattern.factoryPattern.pizzaIngredientFactory.PizzaIngredientFactory;
 
-public class ChicagoStylePizzaIngredientFactory implements PizzaIngredientFactory {
+public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDough() {
         return null;
