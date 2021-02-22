@@ -5,7 +5,7 @@ import com.designPattern.commandPattern.command.impl.EmptyCommand;
 
 import java.util.Arrays;
 
-public aspect RemoteControl {
+public class RemoteControl {
     private final int SIZE = 7;
     Command[] onCommands;
     Command[] offCommands;
