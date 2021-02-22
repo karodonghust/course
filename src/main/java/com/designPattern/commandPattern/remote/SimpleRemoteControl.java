@@ -1,4 +1,6 @@
-package com.designPattern.commandPattern;
+package com.designPattern.commandPattern.remote;
+
+import com.designPattern.commandPattern.command.Command;
 
 public class SimpleRemoteControl {
     Command slot;

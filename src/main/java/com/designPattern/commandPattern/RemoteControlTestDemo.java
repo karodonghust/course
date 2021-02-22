@@ -1,9 +1,12 @@
 package com.designPattern.commandPattern;
 
+import com.designPattern.commandPattern.command.impl.StereoOnWithCDCommand;
 import com.designPattern.commandPattern.compenent.GarageDoor;
 import com.designPattern.commandPattern.compenent.Light;
-import com.designPattern.commandPattern.impl.GarageDoorOpenCommand;
-import com.designPattern.commandPattern.impl.LightOnCommand;
+import com.designPattern.commandPattern.command.impl.GarageDoorOpenCommand;
+import com.designPattern.commandPattern.command.impl.LightOnCommand;
+import com.designPattern.commandPattern.compenent.Stereo;
+import com.designPattern.commandPattern.remote.SimpleRemoteControl;
 
 public class RemoteControlTestDemo {
 
@@ -21,6 +24,11 @@ public class RemoteControlTestDemo {
         remote.buttonWasPressed();
 
         remote.setCommand(lightOn);
+        remote.buttonWasPressed();
+
+        Stereo stereo = new Stereo();
+        StereoOnWithCDCommand stereoOn = new StereoOnWithCDCommand(stereo);
+        remote.setCommand(stereoOn);
         remote.buttonWasPressed();
     }
 }

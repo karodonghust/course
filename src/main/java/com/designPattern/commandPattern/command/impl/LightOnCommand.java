@@ -1,6 +1,6 @@
-package com.designPattern.commandPattern.impl;
+package com.designPattern.commandPattern.command.impl;
 
-import com.designPattern.commandPattern.Command;
+import com.designPattern.commandPattern.command.Command;
 import com.designPattern.commandPattern.compenent.Light;
 
 public class LightOnCommand implements Command {
