@@ -9,6 +9,7 @@ public aspect RemoteControl {
     private final int SIZE = 7;
     Command[] onCommands;
     Command[] offCommands;
+    Command undoCommand;
 
     public RemoteControl() {
         onCommands = new Command[SIZE];
@@ -19,6 +20,7 @@ public aspect RemoteControl {
             onCommands[i] = emptyCommand;
             offCommands[i] = emptyCommand;
         }
+        undoCommand = emptyCommand;
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -34,6 +36,8 @@ public aspect RemoteControl {
             return;
         }
         onCommands[slot].execute();
+        undoCommand = onCommands[slot];
+
     }
 
     public void offButtonWasPressed(int slot) {
@@ -41,6 +45,11 @@ public aspect RemoteControl {
             return;
         }
         offCommands[slot].execute();
+        undoCommand = offCommands[slot];
+    }
+
+    public void undoButtonWasPressed(){
+        undoCommand.undo();
     }
 
     @Override
