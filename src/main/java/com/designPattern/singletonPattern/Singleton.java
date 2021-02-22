@@ -27,6 +27,10 @@ public class Singleton {
      * 当该类依赖别的类时，为了保证初始化的正确性，推荐使用单例模式
      */
 
+    public void m(){
+        System.out.println(this.hashCode());
+    }
+
     private Singleton(){}
 
     //非线程安全
@@ -38,11 +42,24 @@ public class Singleton {
 //    }
 
     //线程安全，但是只有在首次获取对象时，才会出现线程不安全问题，编程同步方法后，导致后续应用性能被拖慢
-    public static synchronized Singleton getInstance(){
+    public static Singleton getInstance(){
         if(null == uniqueInstance){
+            try{
+                Thread.sleep(1);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
             uniqueInstance = new Singleton();
         }
         return uniqueInstance;
+    }
+
+    public static void main(String[] args) {
+        for(int i=0;i<1000;i++){
+            new Thread(() ->{
+                Singleton.getInstance().m();
+            }).start();
+        }
     }
 
 }
