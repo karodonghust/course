@@ -1,15 +1,22 @@
 package com.designPattern.statePattern.machine;
 
 import com.designPattern.statePattern.state.State;
-import com.designPattern.statePattern.state.impl.HasQuarterState;
-import com.designPattern.statePattern.state.impl.NoQuarterState;
-import com.designPattern.statePattern.state.impl.SoldOutState;
+import com.designPattern.statePattern.state.impl.*;
 
 public class GumballMachine {
     State soldOutState;
     State noQuarterState;
     State hasQuarterState;
     State soldState;
+    State winnerState;
+
+    public State getWinnerState() {
+        return winnerState;
+    }
+
+    public void setWinnerState(State winnerState) {
+        this.winnerState = winnerState;
+    }
 
     State state = soldOutState;
     int count = 0;
@@ -18,7 +25,8 @@ public class GumballMachine {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
-        soldState = new HasQuarterState(this);
+        soldState = new SoldState(this);
+        winnerState = new WinnerState(this);
         this.count = numberGumballs;
         if(numberGumballs >0 ){
             state = noQuarterState;
@@ -87,5 +95,13 @@ public class GumballMachine {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    @Override
+    public String toString() {
+        return "GumballMachine{" +
+                "state=" + state +
+                ", count=" + count +
+                '}';
     }
 }
