@@ -31,4 +31,9 @@ public class NoQuarterState implements State {
     public void dispense() {
         System.out.println("No gumball dispensed");
     }
+
+    @Override
+    public String toString() {
+        return "NoQuarterState";
+    }
 }
