@@ -1,5 +1,7 @@
 package com.designPattern.compoundPattern.quack;
 
-public interface Quackalbe {
+import com.designPattern.compoundPattern.observable.QuackObservable;
+
+public interface Quackalbe extends QuackObservable {
     void quack();
 }
