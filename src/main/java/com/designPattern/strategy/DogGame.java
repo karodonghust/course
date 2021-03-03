@@ -3,6 +3,8 @@ package com.designPattern.strategy;
 import com.designPattern.strategy.impl.BigRedDog;
 import com.designPattern.strategy.impl.SmallBlackDog;
 
+import java.util.Comparator;
+
 public class DogGame {
 
     public static void main(String[] args) {
@@ -21,5 +23,14 @@ public class DogGame {
 
         System.out.println(bigRed);
         System.out.println(littleBlack);
+
+        Dog[] dogs = {};
+        Sorter<Dog> sorter = new Sorter<>();
+        sorter.sort(dogs, new Comparator<Dog>() {
+            @Override
+            public int compare(Dog o1, Dog o2) {
+                return 0;
+            }
+        });
     }
 }
