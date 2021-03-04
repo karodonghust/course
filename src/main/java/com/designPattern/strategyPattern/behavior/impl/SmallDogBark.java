@@ -1,6 +1,6 @@
-package com.designPattern.strategy.behavior.impl;
+package com.designPattern.strategyPattern.behavior.impl;
 
-import com.designPattern.strategy.behavior.BarkBehavior;
+import com.designPattern.strategyPattern.behavior.BarkBehavior;
 
 public class SmallDogBark implements BarkBehavior {
 

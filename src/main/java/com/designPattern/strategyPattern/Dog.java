@@ -1,17 +1,20 @@
-package com.designPattern.strategy;
+package com.designPattern.strategyPattern;
 
-import com.designPattern.strategy.behavior.BarkBehavior;
-import com.designPattern.strategy.behavior.RunBehavior;
+import com.designPattern.strategyPattern.behavior.BarkBehavior;
+import com.designPattern.strategyPattern.behavior.RunBehavior;
+import com.designPattern.strategyPattern.comparable.HaveWeight;
 
-public abstract class Dog implements Comparable<Dog> {
+import java.util.Comparator;
+
+public abstract class Dog implements Comparable<Dog>, HaveWeight {
     public String name;
     public String color;
     private BarkBehavior barkBehavior;
     private RunBehavior runBehavior;
-    Comparable<Dog> comparable;
+    Comparator<Dog> comparator;
 
-    public Dog(Comparable<Dog> comparable) {
-        this.comparable = comparable;
+    public Dog(Comparator<Dog> comparator) {
+        this.comparator = comparator;
     }
 
     public void bark() {
@@ -32,7 +35,7 @@ public abstract class Dog implements Comparable<Dog> {
 
     @Override
     public int compareTo(Dog o) {
-        return comparable.compareTo(o);
+        return comparator.compare(this,o);
     }
 
     @Override
@@ -41,5 +44,10 @@ public abstract class Dog implements Comparable<Dog> {
                 "name='" + name + '\'' +
                 ", color='" + color + '\'' +
                 '}';
+    }
+
+    @Override
+    public int getWeight() {
+        return 0;
     }
 }

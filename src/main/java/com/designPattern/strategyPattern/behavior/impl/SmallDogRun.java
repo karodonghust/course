@@ -1,6 +1,6 @@
-package com.designPattern.strategy.behavior.impl;
+package com.designPattern.strategyPattern.behavior.impl;
 
-import com.designPattern.strategy.behavior.RunBehavior;
+import com.designPattern.strategyPattern.behavior.RunBehavior;
 
 public class SmallDogRun implements RunBehavior {
 

@@ -1,4 +1,4 @@
-package com.designPattern.strategy;
+package com.designPattern.strategyPattern;
 
 import java.util.Comparator;
 

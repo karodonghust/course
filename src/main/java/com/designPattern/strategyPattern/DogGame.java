@@ -1,15 +1,17 @@
-package com.designPattern.strategy;
+package com.designPattern.strategyPattern;
 
-import com.designPattern.strategy.impl.BigRedDog;
-import com.designPattern.strategy.impl.SmallBlackDog;
+import com.designPattern.strategyPattern.comparable.WeightComparator;
+import com.designPattern.strategyPattern.impl.BigRedDog;
+import com.designPattern.strategyPattern.impl.SmallBlackDog;
 
 import java.util.Comparator;
 
 public class DogGame {
 
     public static void main(String[] args) {
-        Dog littleBlack = new SmallBlackDog("littleBlack");
-        Dog bigRed = new BigRedDog("bigRed");
+        Comparator<Dog> comparator = new WeightComparator<>();
+        Dog littleBlack = new SmallBlackDog("littleBlack", comparator);
+        Dog bigRed = new BigRedDog("bigRed", comparator);
 
         System.out.println("小狗跑：");
         littleBlack.run();
