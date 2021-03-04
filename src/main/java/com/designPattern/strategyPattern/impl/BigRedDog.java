@@ -8,8 +8,7 @@ import java.util.Comparator;
 
 public class BigRedDog extends Dog {
 
-    public BigRedDog(String name, Comparator comparator){
-        super(comparator);
+    public BigRedDog(String name){
         this.color = "red";
         this.name = name;
         setBarkBehavior(new BigDogBark());

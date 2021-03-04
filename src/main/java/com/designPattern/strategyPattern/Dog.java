@@ -6,16 +6,12 @@ import com.designPattern.strategyPattern.comparable.HaveWeight;
 
 import java.util.Comparator;
 
-public abstract class Dog implements Comparable<Dog>, HaveWeight {
+public abstract class Dog implements HaveWeight {
     public String name;
     public String color;
     private BarkBehavior barkBehavior;
     private RunBehavior runBehavior;
-    Comparator<Dog> comparator;
 
-    public Dog(Comparator<Dog> comparator) {
-        this.comparator = comparator;
-    }
 
     public void bark() {
         barkBehavior.bark();
@@ -31,11 +27,6 @@ public abstract class Dog implements Comparable<Dog>, HaveWeight {
 
     public void setRunBehavior(RunBehavior runBehavior) {
         this.runBehavior = runBehavior;
-    }
-
-    @Override
-    public int compareTo(Dog o) {
-        return comparator.compare(this,o);
     }
 
     @Override

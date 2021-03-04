@@ -10,8 +10,8 @@ public class DogGame {
 
     public static void main(String[] args) {
         Comparator<Dog> comparator = new WeightComparator<>();
-        Dog littleBlack = new SmallBlackDog("littleBlack", comparator);
-        Dog bigRed = new BigRedDog("bigRed", comparator);
+        Dog littleBlack = new SmallBlackDog("littleBlack");
+        Dog bigRed = new BigRedDog("bigRed");
 
         System.out.println("小狗跑：");
         littleBlack.run();
